@@ -6,7 +6,7 @@ import pandas as pd
 # population
 N = 98514000
 # simuation Time / 模擬週期
-T = 60
+T = 180
 # susceptiable ratio / 易染者比率
 s = np.zeros([T])
 # infective ratio / 染病者比率
@@ -15,9 +15,9 @@ i = np.zeros([T])
 r = np.zeros([T])
 
 # contact rate / 接觸率
-lamda = 1.28
+lamda = 1
 # recover rate / (治癒+死亡)率
-gamma = 0.141
+gamma = 0.95
 
 # initial infective people / 期初染病人數
 s[0] = (98514000-263) / N
@@ -36,7 +36,7 @@ ax.plot(r, c='g', lw=2, label='R')
 ax.set_xlabel('Day/模擬週期', fontproperties = 'SimHei', fontsize=16)
 ax.set_ylabel('Infective Ratio/感染率', fontproperties = 'SimHei', fontsize=16)
 ax.grid()
-plt.xticks((np.arange(0, 61, 5)),fontsize=18)
+plt.xticks(fontsize=20)
 plt.yticks((np.arange(0, 1.1, 0.1)),fontsize=18)
 plt.legend()
 
