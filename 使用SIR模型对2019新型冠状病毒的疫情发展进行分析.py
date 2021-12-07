@@ -18,12 +18,13 @@ def linear_regression(x, y):
 
 data = pd.read_csv('D:/Angela-Science/vietnam-covid-data.csv')
 I = list(data['new_cases'])
-N =98000000
+N =98540000
 Day = []
 logI = []
 for i in range(len(I)):
     Day.append(i+1)
     logI.append(math.log(I[i]))
+
 
     
 X1=np.array(Day)

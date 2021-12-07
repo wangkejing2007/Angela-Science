@@ -15,14 +15,14 @@ i = np.zeros([T])
 r = np.zeros([T])
 
 # contact rate / 接觸率
-lamda = 1.28
+lamda = 1.20
 # recover rate / (治癒+死亡)率
-gamma = 0.65
+gamma = 0.608
 
 # initial infective people / 期初染病人數
-s[0] = (8837544-227-148) / N
-i[0] = 227 / N
-r[0] = 148 / N
+s[0] = (8837544-31) / N
+i[0] = 31 / N
+#r[0] = 1 / N
 
 for t in range(T-1):
     i[t + 1] = i[t] + i[t] * lamda * s[t] - gamma*i[t]
@@ -36,8 +36,8 @@ ax.plot(r, c='g', lw=2, label='R')
 ax.set_xlabel('Day/模擬週期', fontproperties = 'SimHei', fontsize=16)
 ax.set_ylabel('Infective Ratio/感染率', fontproperties = 'SimHei', fontsize=16)
 ax.grid(1)
-plt.xticks(fontsize=20)
-plt.yticks(fontsize=20)
+plt.xticks((np.arange(0, 61, 5)),fontsize=20)
+plt.yticks((np.arange(0, 1.1, 0.1)),fontsize=20)
 plt.legend()
 
 plt.show()
