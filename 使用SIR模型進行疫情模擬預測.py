@@ -1,4 +1,6 @@
 #   我們定義函數的名稱為SIR
+#  http://cookdata.cn/note/view_static_note/17ef9ad67f9998deed2efcc7a207fc88/
+
 def SIR(y,t,beta,gamma):
     S,I,R = y
     dSdt = -S*(I/(S+I+R))*beta
