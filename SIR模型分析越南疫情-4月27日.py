@@ -42,12 +42,14 @@ ax2.set_ylabel('感染人數', fontsize=16)
 
 plt.sca(ax1)
 plt.scatter(Day,I, marker = 'x', s = 10,color='blue', label='實際確診')
+plt.yticks((np.arange(0, 20000, 1000)),fontsize=10)
 
 plt.sca(ax2)
-plt.scatter(Day,logI, marker = '+', s = 10,color='gray', label='logarithm/對數')
+plt.scatter(Day,logI, marker = '+', s = 10,color='gray', label='logarithm/對數值')
+
 plt.yticks([])
 
-plt.plot(Day, _Y1,color='red', label='simulation/模擬')
+plt.plot(Day, _Y1,color='red', label='simulation/擬合走勢')
 
 plt.legend()
 plt.show()

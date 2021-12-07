@@ -7,7 +7,7 @@ def SIR(y,t,beta,gamma):
     return [dSdt,dIdt,dRdt]
 
 # 設置人群總人數為N
-N = 58000000
+N = 98540000
 # 設置初始時的感染人數I0為239
 I0 = 239
 # 設置初始時的恢復人數R0為31
