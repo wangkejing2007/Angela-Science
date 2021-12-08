@@ -27,7 +27,6 @@ for i in range(len(I)):
     Day.append(i+1)
     logI.append(math.log(I[i]))
 
-
 X1=np.array(Day)
 Y1=np.array(logI)
 a0, a1 = linear_regression(X1, Y1)
