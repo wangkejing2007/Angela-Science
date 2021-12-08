@@ -39,6 +39,6 @@ plt.xlabel('疫情天數', fontproperties = 'SimHei', fontsize=14)
 plt.ylabel('感染人數', fontproperties = 'SimHei', fontsize=14)
 
 plt.xticks((np.arange(0, 260, 10)),fontsize=10)
-plt.yticks((np.arange(0, 18000, 1000)),fontsize=12)
+plt.yticks((np.arange(0, 18000, 1000)),fontsize=10)
 
 plt.show()
